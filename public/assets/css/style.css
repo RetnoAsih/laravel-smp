@@ -1,0 +1,156 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.merah {
+    color: blue;
+}
+
+.layout {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-image: url("/assets/img/bg2.png");
+}
+
+
+
+.part {
+    display: flex;
+    flex-direction: row;
+
+    padding: 10px;
+}
+.a {
+}
+.b {
+}
+.c {
+    display: block;
+}
+.d {
+    height: 25px;
+}
+.inner {
+    width: 50%;
+
+    display: flex;
+}
+.inner-40 {
+    width: 45%;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+}
+.inner-60 {
+    width: 55%;
+    display: flex;
+    padding-right: 100px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.inner-20 {
+    width: 20%;
+    display: flex;
+    background-color: rgb(226, 43, 52);
+}
+.inner-full {
+    width: 100%;
+    display: flex;
+    background-color: rgb(58, 41, 42);
+}
+.kanan {
+    justify-content: flex-end;
+}
+.kiri {
+    justify-content: flex-start;
+}
+.jamdigital {
+    background-color: #000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); /* x, y, blur, warna */
+}
+.jam {
+    color: yellow;
+    font-size: 30pt;
+}
+.tanggal {
+    color: #fff;
+    font-size: 15pt;
+    margin: 5px;
+}
+.box {
+    margin: 5px;
+    padding: 10px;
+    background-color: #0d5497;
+    color: #ffff;
+    border-radius: 10px;
+    font-size: 20pt;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); /* x, y, blur, warna */
+}
+.textkuning {
+    color: #ffb310;
+}
+.wallpaper {
+    width: 100%;
+    height: auto; /* atau tinggi lain: 60vh / 500px */
+    overflow: hidden; /* biar rapi */
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #000;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); /* x, y, blur, warna */
+}
+
+.wallpaper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* gambar utuh, tidak terpotong */
+    object-position: top; /* posisikan di atas */
+    display: block;
+    border-radius: 10px; /* hilangkan gap inline img */
+}
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background: #0d5497; /* warna biru BRI */
+    color: #fff;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.marquee__inner {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee__inner span {
+    margin-right: 50px; /* jarak antar teks */
+}
+
+.marquee:hover .marquee__inner {
+    animation-play-state: paused; /* berhenti saat di-hover */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
