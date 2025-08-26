@@ -38,13 +38,13 @@
               <li><a href="/berita/jadwal-pelajaran">Jadwal Pelajaran</a></li>
               <li><a href="https://pdk.jatengprov.go.id/wp-content/uploads/2025/07/PEDOMAN-PENYUSUNAN-KALDIK-2025-2026-.pdf#page=46" target="blank">Kalender Pendidikan</a></li>
               
-              <li><a href="/berita/sarana-dan-prasarana">Tata Tertib</a></li>
+              <li><a href="/berita/tata-tertib-smp-maarif-nu-01-wanareja">Tata Tertib</a></li>
               
             </ul>
           </li>
           <li><a href="doctors.html">Data Siswa</a></li>
-          <li><a href="doctors.html">E-Learning</a></li>
-          <li><a href="doctors.html">Galeri</a></li>
+          <li><a href="https://classroom.google.com/" target="_blank">E-Learning</a></li>
+          <li><a href="/_galeri">Galeri</a></li>
           <li><a href="doctors.html">Hubungi Kami</a></li>
           <li><a href="doctors.html">Lokasi</a></li>
           <li class="dropdown"><a href="#"><span>Alumni</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>

@@ -54,6 +54,7 @@ Route::post('/api/tambah-absensi', function (Request $request) {
 
 // routes berita
 Route::get('/berita', [BeritaCon::class, 'index']);
+Route::get('/_galeri', [BeritaCon::class, 'galeri']);
 Route::get('/_berita', [BeritaCon::class, 'katalog']);
 Route::post('/berita/tambahberita', [BeritaCon::class, 'tambahberita'])->name('berita.tambahberita'); 
 Route::get('/berita/{id}/edit', [BeritaCon::class, 'edit'])->name('berita.edit');

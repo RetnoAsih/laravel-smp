@@ -47,10 +47,9 @@ public function tambahberita(Request $request)
         $path = public_path('uploads/berita/' . $filename);
 
         // Resize + compress
-        $img = Image::read($file)->resize(1200, null, function ($c) {
-            $c->aspectRatio();
-            $c->upsize();
-        });
+        $img = Image::read($file)
+        ->scale(width: 1200);
+        
 
         $quality = 90;
         do {
@@ -125,6 +124,12 @@ public function update(Request $request, $id)
     $berita->save();
 
     return redirect()->back()->with('success', 'Berita berhasil diperbarui!');
+}
+
+public function galeri()
+{
+    $beritas = Beritas::all();
+    return view('galeri', compact('beritas'));
 }
 
 
