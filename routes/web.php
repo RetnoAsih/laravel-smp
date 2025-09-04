@@ -21,6 +21,11 @@ use App\Http\Controllers\BeritaCon;
 use App\Models\Absensis;
 use Illuminate\Http\Request;   
 
+//dashboard
+Route::get('/_dashboard', function () {
+    return view('dashhome');
+});
+
 //routes Admin
 Route::get('/admins', [AdminsCon::class, 'index']);
 Route::post('/admin/tambahadmin', [AdminsCon::class, 'tambahadmin'])->name('admin.tambahadmin'); 
@@ -51,30 +56,41 @@ Route::post('/api/tambah-absensi', function (Request $request) {
 
     return response()->json(['status' => 'success']);
 });
+// routes/web.php
+Route::get('/absensi/terbaru', [AbsensiCon::class, 'getTerbaru']);
+
 
 // routes berita
+
 Route::get('/berita', [BeritaCon::class, 'index']);
-Route::get('/_galeri', [BeritaCon::class, 'galeri']);
-Route::get('/_berita', [BeritaCon::class, 'katalog']);
 Route::post('/berita/tambahberita', [BeritaCon::class, 'tambahberita'])->name('berita.tambahberita'); 
 Route::get('/berita/{id}/edit', [BeritaCon::class, 'edit'])->name('berita.edit');
 Route::delete('/berita/{id}', [BeritaCon::class, 'destroy'])->name('berita.destroy'); 
 Route::put('/berita/{id}', [BeritaCon::class, 'update'])->name('berita.update');
 
-Route::get('/berita/{slug}', [BeritaCon::class, 'show'])->name('show');
 
+
+//frontpage
+Route::get('/_galeri', [BeritaCon::class, 'galeri']);
+Route::get('/_berita', [BeritaCon::class, 'katalog']);
+Route::get('/berita/{slug}', [BeritaCon::class, 'show'])->name('show');
 
 Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/admin', function () {
-    return view('dashboard');
-});
-
 Route::get('/profil', function () {
     return view('about');
 });
+
+Route::get('/_login', function () {
+    return view('login');
+});
+
+Route::post('/login', [AdminsCon::class, 'login']);
+Route::get('/logout', [AdminsCon::class, 'logout']);
+
+
 Route::get('/dbtest', function () {
     try {
         DB::connection()->getPdo();
@@ -103,13 +119,14 @@ Route::get('/hai', function () {
 
 use App\Http\Controllers\AuthController;
 
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-
+//Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+//Route::post('/login', [AuthController::class, 'login']);
+//Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+/*
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware('auth');
+*/
 
 use App\Http\Controllers\ImageController;
 

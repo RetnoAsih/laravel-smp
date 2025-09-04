@@ -18,7 +18,7 @@ protected $primaryKey = 'id'; // Kolom primary key
      * @var array<int, string>
      */
     protected $fillable = [
-        'id',
+        'uid',
         'nama_siswa',
         'kelas',
         'no_hp',

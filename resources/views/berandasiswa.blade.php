@@ -32,7 +32,7 @@
 
         <tr>
             <td>{{ $no++ }}</td>
-            <td>{{ $ds->id }}</td>
+            <td>{{ $ds->uid }}</td>
             <td>{{ $ds->nama_siswa }}</td>
             <td>{{ $ds->kelas }}</td>
             <td>{{ $ds->no_hp }}</td>
@@ -42,6 +42,7 @@
         data-bs-toggle="modal"
         data-bs-target="#editAdminModal"
         data-id="{{ $ds->id }}"
+        data-uid="{{ $ds->uid }}"
         data-nama_siswa="{{ $ds->nama_siswa }}"
         data-kelas="{{ $ds->kelas }}"
         data-no_hp="{{ $ds->no_hp }}">
@@ -90,7 +91,7 @@
             <div class="col-md-6">
               <div class="mb-3">
                 <label class="form-label">RFID</label>
-                <input type="text" name="id" class="form-control" required>
+                <input type="text" name="uid" class="form-control" >
               </div>
             </div>
             <div class="col-md-6">
@@ -149,7 +150,7 @@
             <div class="col-md-6">
               <div class="mb-3">
                 <label class="form-label">RFID</label>
-                <input type="text" id="edit_id" name="id" class="form-control" required>
+                <input type="text" id="edit_uid" name="uid" class="form-control" required>
               </div>
             </div>
             <div class="col-md-6">
@@ -196,13 +197,13 @@ document.addEventListener('DOMContentLoaded', function () {
     editModal.addEventListener('show.bs.modal', function (event) {
         var button = event.relatedTarget;
 
-        var id = button.getAttribute('data-id');
+        var uid = button.getAttribute('data-uid');
         var nama_siswa = button.getAttribute('data-nama_siswa');
         var kelas = button.getAttribute('data-kelas');
         var no_hp = button.getAttribute('data-no_hp');
 
         // Isi form
-        document.getElementById('edit_id').value = id;
+        document.getElementById('edit_uid').value = uid;
         document.getElementById('edit_nama_siswa').value = nama_siswa;
         document.getElementById('edit_kelas').value = kelas;
         document.getElementById('edit_no_hp').value = no_hp;

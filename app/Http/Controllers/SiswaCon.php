@@ -20,7 +20,7 @@ class SiswaCon extends BaseController
     {
         // Validasi input
         $request->validate([
-            'id'   => 'required',
+            //'id'   => 'required',
             'nama_siswa'    => 'required',
             'kelas' => 'required',
             'no_hp'    => 'required',
@@ -29,7 +29,7 @@ class SiswaCon extends BaseController
 
         // Simpan ke database
         Siswas::create([
-            'id'     => $request->id,
+            //'id'     => $request->id,
             'nama_siswa'    => $request->nama_siswa,
             'password' => bcrypt($request->password),
             'no_hp'    => $request->no_hp,
@@ -56,14 +56,14 @@ public function update(Request $request, $id)
     $siswa = Siswas::findOrFail($id);
 
     $request->validate([
-        'id' => 'required',
+        //'id' => 'required',
         'nama_siswa'     => 'required',
         'kelas'        => 'required',
         'no_hp'        => 'required',
         
     ]);
 
-    $siswa->id = $request->id;
+    //$siswa->id = $request->id;
     $siswa->nama_siswa = $request->nama_siswa;
     $siswa->kelas = $request->kelas;
     $siswa->no_hp = $request->no_hp;

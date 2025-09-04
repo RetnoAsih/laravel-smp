@@ -12,6 +12,7 @@ class Admins extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 protected $table = 'admins'; // Nama tabel sesuai di database
+protected $primaryKey = 'id';
     /**
      * The attributes that are mass assignable.
      *
@@ -25,6 +26,9 @@ protected $table = 'admins'; // Nama tabel sesuai di database
         'roles',
     ];
     public $timestamps = false;
+    protected $hidden = [
+        'password',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

@@ -7,9 +7,12 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use App\Models\Admins; 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AdminsCon extends BaseController
 {
+
+
    public function index()
     {
         $dataadmin = Admins::all(); // Ambil semua data dari tabel admins
@@ -71,6 +74,30 @@ public function update(Request $request, $id)
 
     return redirect()->back()->with('success', 'Admin berhasil diperbarui!');
 }
+
+public function login(Request $request)
+    {
+        $request->validate([
+            'username' => 'required',
+            'password' => 'required',
+        ]);
+
+        $admin = Admins::where('username', $request->username)->first();
+
+        if ($admin && Hash::check($request->password, $admin->password)) {
+            // Simpan session manual
+            session(['admin_id' => $admin->id, 'username' => $admin->username]);
+            return redirect('/_dashboard')->with('success', 'Login berhasil!');
+        } else {
+            return back()->withErrors(['_login' => 'Username atau password salah']);
+        }
+    }
+
+    public function logout()
+    {
+        session()->flush();
+        return redirect('/_login')->with('success', 'Anda telah logout.');
+    }
 
 
 }

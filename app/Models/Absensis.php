@@ -36,7 +36,7 @@ class Absensis extends Model
     public $timestamps = false;
     public function siswa()
     {
-        return $this->belongsTo(Siswas::class, 'id_siswa', 'id');
+        return $this->belongsTo(Siswas::class, 'id_siswa', 'uid');
     }
 
 }

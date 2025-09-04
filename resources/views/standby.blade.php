@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('dashboard/assets/img/apple-icon.png') }}">
   <link rel="icon" type="image/png" href="{{ asset('dashboard/assets/img/favicon.png') }}">
@@ -42,29 +43,29 @@
           
               </form>
             </div>
-            @if($absensiTerbaru)
+            
             <div class="box">
               
                
               <span>
-Nama: <span class="textkuning">{{ $absensiTerbaru->siswa->nama_siswa }}</span>
+Nama: <span class="textkuning" id="nama-siswa">{{ $absensiTerbaru->siswa->nama_siswa ?? '-' }}</span>
               </span>
             </div>
             <div class="box">
               
               <span>
-Kelas: <span class="textkuning">{{ $absensiTerbaru->siswa->kelas }}</span>
+Kelas: <span class="textkuning" id="kelas">{{ $absensiTerbaru->siswa->kelas ?? '-' }}</span>
               </span>
             </div>
             <div class="box">
               
                
               <span>
-Waktu: <span class="textkuning">{{ $absensiTerbaru->waktu }}</span>
+Waktu: <span class="textkuning" id="waktu">{{ $absensiTerbaru->waktu ?? '-' }}</span>
               </span>
             </div>
             
-              @endif
+              
             
           
           
@@ -90,8 +91,8 @@ Waktu: <span class="textkuning">{{ $absensiTerbaru->waktu }}</span>
         </div>
         
     </div>
-    <button type="button" onclick="connectSerial()">Hubungkan Arduino</button>
-    <a href="{{ 'admins'}}">Kembali Ke Dasboard</a>
+    
+    <a href="/_dashboard">Kembali Ke Dasboard</a>
 </body>
 </html>
 
@@ -161,3 +162,18 @@ updateJam(); // panggil sekali biar langsung muncul
 </script>
 
 
+<script>
+  //load absensi terbaru
+    function loadAbsensiTerbaru() {
+        fetch('/absensi/terbaru')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('nama-siswa').textContent = data?.siswa?.nama_siswa || '-';
+                document.getElementById('kelas').textContent = data?.siswa?.kelas || '-';
+                document.getElementById('waktu').textContent = data?.waktu || '-';
+            });
+    }
+
+    // Update tiap 5 detik
+    setInterval(loadAbsensiTerbaru, 1000);
+</script>

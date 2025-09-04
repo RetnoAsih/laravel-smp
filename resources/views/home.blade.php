@@ -9,7 +9,7 @@
       <div class="container-fluid p-0">
         <div class="hero-wrapper">
           <div class="hero-image">
-            <img src="assets/img/health/showcase-1.webp" alt="Advanced Healthcare" class="img-fluid">
+            <img src="assets/img/depansmp.png" class="img-fluid">
           </div>
 
           <div class="hero-content">
@@ -156,21 +156,21 @@
 
         <div class="row mt-5 pt-4 certifications-row" data-aos="fade-up" data-aos-delay="600">
           <div class="col-12 text-center mb-4">
-            <h4 class="certification-title">Our Accreditations</h4>
+            <h4 class="certification-title"></h4>
           </div>
           <div class="col-12">
-            <div class="certifications">
+            <div class="certifications"> <!-- logo logo -->
               <div class="certification-item" data-aos="zoom-in" data-aos-delay="700">
-                <img src="assets/img/clients/clients-1.webp" alt="Certification">
+                <img src="assets/img/lazisnu.png" alt="Certification">
               </div>
               <div class="certification-item" data-aos="zoom-in" data-aos-delay="800">
-                <img src="assets/img/clients/clients-2.webp" alt="Certification">
+                <img src="assets/img/tutwuri.png" alt="Certification">
               </div>
               <div class="certification-item" data-aos="zoom-in" data-aos-delay="900">
-                <img src="assets/img/clients/clients-3.webp" alt="Certification">
+                <img src="assets/img/ipnuippnu.png" alt="Certification">
               </div>
               <div class="certification-item" data-aos="zoom-in" data-aos-delay="1000">
-                <img src="assets/img/clients/clients-4.webp" alt="Certification">
+                <img src="assets/img/tunaskelapa.png" alt="Certification">
               </div>
             </div>
           </div>

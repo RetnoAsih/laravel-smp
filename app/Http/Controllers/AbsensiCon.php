@@ -93,6 +93,14 @@ public function update(Request $request, $id)
 
     return redirect()->back()->with('success', 'Absensi berhasil diperbarui!');
 }
+public function getTerbaru()
+{
+    $absensiTerbaru = Absensis::with('siswa')
+        ->orderBy('waktu', 'desc')
+        ->first();
+
+    return response()->json($absensiTerbaru);
+}
 
 
 }
