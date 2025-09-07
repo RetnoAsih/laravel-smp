@@ -2,37 +2,36 @@
 
     <div class="container footer-top">
       <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename"><img src="assets/img/logosmp.png" alt=""></span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>Jl KH Hasyim Asyari No.09, RT.03/RW.XII </p>
-            <p>Bantar, Wanareja, Cilacap</p>
-            <p class="mt-3"><strong>Phone:</strong> <a href="https://wa.me/6282358767313?text=Halo%2C%20saya%20ingin%20bertanya%20lebih%20lanjut.
-"target="_blank"><span>082358767313</span></a></p>
-            <p><strong>Email:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=smpmfnuwanareja@gmail.com&su=Permohonan%20Informasi&body=Yth.%20SMP%20Ma'arif%20NU%201%20Wanareja%2C%0D%0ASaya%20ingin%20menanyakan%20mengenai...
-" target="_blank"><span>smpmfnuwanareja@gmail.com</span></a></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
 
-        <div class="col-lg-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
 
+        <div class="col-lg-4 footer-about d-flex align-items-end">
+  <a href="index.html" class="logo d-flex align-items-center">
+    <span class="sitename">
+      <img src="{{ asset('assets/img/logosmp.png')}}" alt="">
+    </span>
+  </a>
+</div>
+
+
+<div class="col-lg-4 footer-about text-center">
+  <div class="footer-contact pt-3">
+    <p>Jl KH Hasyim Asyari No.09, RT.03/RW.XII </p>
+    <p>Bantar, Wanareja, Cilacap</p>
+  </div>
+</div>
+
+
+<div class="col-lg-4 footer-about">
+  <div class="social-links d-flex justify-content-end mt-4">
+    <a href=""><i class="bi bi-twitter-x"></i></a>
+    <a href=""><i class="bi bi-facebook"></i></a>
+    <a href=""><i class="bi bi-instagram"></i></a>
+    <a href=""><i class="bi bi-linkedin"></i></a>
+  </div>
+</div>
+
+
+  
         
 
       </div>
@@ -59,17 +58,17 @@
   -->
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{ asset('assets/vendor/aos/aos.js')}}"></script>
+  <script src="{{ asset('assets/vendor/purecounter/purecounter_vanilla.js')}}"></script>
+  <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/imagesloaded/imagesloaded.pkgd.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{{ asset('assets/js/main.js')}}"></script>
 
 </body>
 

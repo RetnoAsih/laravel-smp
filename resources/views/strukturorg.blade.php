@@ -126,9 +126,9 @@
                 <img src="https://smpnu1wanareja.wordpress.com/wp-content/uploads/2024/10/zaki.jpg" class="img-fluid">
                 <div class="doctor-overlay">
                   <div class="doctor-social">
-                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="bi bi-envelope"></i></a>
+                    <a href="https://www.tiktok.com/@jeki0006?_t=ZS-8zWZD6ZzStB&_r=1" target="blank" class="social-link"><i class="bi bi-tiktok"></i></a>
+                    <a href="https://www.instagram.com/ahmadmuzaki561?igsh=dHpxMWpxaTgwdHd3" target="blank" class="social-link"><i class="bi bi-instagram"></i></a>
+                    
                   </div>
                 </div>
               </div>
@@ -146,9 +146,9 @@
                 <img src="https://smpnu1wanareja.wordpress.com/wp-content/uploads/2024/10/arvin.jpg" class="img-fluid">
                 <div class="doctor-overlay">
                   <div class="doctor-social">
-                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="bi bi-envelope"></i></a>
+                    <a href="https://www.facebook.com/share/16vHdNmS2E/" target="_blank" class="social-link"><i class="bi bi-facebook"></i></a>
+                    <a href="https://youtube.com/@arjunaarsitek?si=ovNrTDyQE50EGXtV" target="_blank" class="social-link"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.instagram.com/autocadsketchupwanareja?igsh=czJ2MjhpN25hN2Mw" target="_blank" class="social-link"><i class="bi bi-instagram"></i></a>
                   </div>
                 </div>
               </div>

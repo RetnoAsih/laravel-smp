@@ -8,6 +8,7 @@ use Illuminate\Routing\Controller as BaseController;
 use App\Models\Admins; 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class AdminsCon extends BaseController
 {
@@ -76,28 +77,29 @@ public function update(Request $request, $id)
 }
 
 public function login(Request $request)
-    {
-        $request->validate([
-            'username' => 'required',
-            'password' => 'required',
-        ]);
+{
+    $request->validate([
+        'username' => 'required',
+        'password' => 'required',
+    ]);
 
-        $admin = Admins::where('username', $request->username)->first();
-
-        if ($admin && Hash::check($request->password, $admin->password)) {
-            // Simpan session manual
-            session(['admin_id' => $admin->id, 'username' => $admin->username]);
-            return redirect('/_dashboard')->with('success', 'Login berhasil!');
-        } else {
-            return back()->withErrors(['_login' => 'Username atau password salah']);
-        }
+    if (Auth::attempt(['username' => $request->username, 'password' => $request->password])) {
+        $request->session()->regenerate();
+        return redirect()->intended('/_dashboard')->with('success', 'Login berhasil!');
     }
 
-    public function logout()
-    {
-        session()->flush();
-        return redirect('/_login')->with('success', 'Anda telah logout.');
-    }
+    return back()->withErrors([
+        'username' => 'Username atau password salah',
+    ]);
+}
 
+public function logout(Request $request)
+{
+    Auth::logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+
+    return redirect('/_login')->with('success', 'Anda telah logout.');
+}
 
 }

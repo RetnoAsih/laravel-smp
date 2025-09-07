@@ -20,8 +20,8 @@ use App\Http\Controllers\AbsensiCon;
 use App\Http\Controllers\BeritaCon;
 use App\Models\Absensis;
 use Illuminate\Http\Request;   
-
-//dashboard
+Route::middleware('auth')->group(function () {
+//dashboard 
 Route::get('/_dashboard', function () {
     return view('dashhome');
 });
@@ -68,7 +68,7 @@ Route::get('/berita/{id}/edit', [BeritaCon::class, 'edit'])->name('berita.edit')
 Route::delete('/berita/{id}', [BeritaCon::class, 'destroy'])->name('berita.destroy'); 
 Route::put('/berita/{id}', [BeritaCon::class, 'update'])->name('berita.update');
 
-
+});
 
 //frontpage
 Route::get('/_galeri', [BeritaCon::class, 'galeri']);
@@ -85,7 +85,7 @@ Route::get('/profil', function () {
 
 Route::get('/_login', function () {
     return view('login');
-});
+})->name('_login');
 
 Route::post('/login', [AdminsCon::class, 'login']);
 Route::get('/logout', [AdminsCon::class, 'logout']);

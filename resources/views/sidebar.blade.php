@@ -14,92 +14,70 @@
     <hr class="horizontal dark mt-0">
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" href="/_dashboard">
+    <li class="nav-item">
+        <a class="nav-link {{ Request::is('_dashboard') ? 'active' : '' }}" href="/_dashboard">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-tv-2 text-dark text-sm opacity-10"></i>
+                <i class="ni ni-tv-2 text-dark text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Dashboard</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="{{ 'siswa' }}">
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link {{ Request::is('siswa*') ? 'active' : '' }}" href="/siswa">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-calendar-grid-58 text-dark text-sm opacity-10"></i>
+                <i class="ni ni-calendar-grid-58 text-dark text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Kelola Siswa</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="{{ 'absensi' }}">
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link {{ Request::is('absensi*') ? 'active' : '' }}" href="/absensi">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-credit-card text-dark text-sm opacity-10"></i>
+                <i class="ni ni-credit-card text-dark text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Kelola Absensi</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="{{ 'admins' }}">
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link {{ Request::is('admins*') ? 'active' : '' }}" href="/admins">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-credit-card text-dark text-sm opacity-10"></i>
+                <i class="ni ni-credit-card text-dark text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Kelola Admin</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="{{ 'berita' }}">
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link {{ Request::is('berita*') ? 'active' : '' }}" href="/berita">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-credit-card text-dark text-sm opacity-10"></i>
+                <i class="ni ni-credit-card text-dark text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Kelola Berita</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="{{ 'modestandby' }}">
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link {{ Request::is('modestandby') ? 'active' : '' }}" href="/modestandby">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-app text-dark text-sm opacity-10"></i>
+                <i class="ni ni-app text-dark text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Mode Standby</span>
-          </a>
-        </li>
-        <!--
-        <li class="nav-item">
-          <a class="nav-link " href="{{ asset('dashboard/pages/rtl.html') }}">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-world-2 text-dark text-sm opacity-10"></i>
-            </div>
-            <span class="nav-link-text ms-1">RTL</span>
-          </a>
-        </li>
-        <li class="nav-item mt-3">
-          <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="{{ asset('dashboard/pages/profile.html') }}">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
-            </div>
-            <span class="nav-link-text ms-1">Profile</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="{{ asset('dashboard/pages/sign-in.html') }}">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-single-copy-04 text-dark text-sm opacity-10"></i>
-            </div>
-            <span class="nav-link-text ms-1">Sign In</span>
-          </a>
-        </li> -->
+        </a>
+    </li>
 
-        <li class="nav-item">
-          <a class="nav-link " href="{{ asset('dashboard/pages/sign-up.html') }}">
+    <li class="nav-item">
+        <a class="nav-link" href="/logout">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-collection text-dark text-sm opacity-10"></i>
+                <i class="ni ni-collection text-dark text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Keluar</span>
-          </a>
-        </li>
-      </ul>
+        </a>
+    </li>
+</ul>
+
     </div>
     
     <!--div class="sidenav-footer mx-3 ">
