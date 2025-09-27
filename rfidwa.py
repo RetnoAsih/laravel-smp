@@ -80,7 +80,8 @@ while True:
 
             # Kirim notifikasi WA
             if siswa.get("no_hp"):
-                pesan = f"Halo, {siswa['nama_siswa']} baru saja absen di sekolah."
+                pesan = f"Halo, {siswa['nama_siswa']} sudah tiba di sekolah dengan selamat. Semoga selalu sehat, bahagia, dan semangat mengikuti pelajaran hari ini."
+
                 kirim_wa(siswa["no_hp"], pesan)
         else:
             print("UID belum terdaftar di tabel siswas")

@@ -150,7 +150,7 @@
             <div class="col-md-6">
               <div class="mb-3">
                 <label class="form-label">RFID</label>
-                <input type="text" id="edit_uid" name="uid" class="form-control" required>
+                <input type="text" id="edit_uid" name="uid" class="form-control" >
               </div>
             </div>
             <div class="col-md-6">
@@ -197,6 +197,7 @@ document.addEventListener('DOMContentLoaded', function () {
     editModal.addEventListener('show.bs.modal', function (event) {
         var button = event.relatedTarget;
 
+        var id = button.getAttribute('data-id');
         var uid = button.getAttribute('data-uid');
         var nama_siswa = button.getAttribute('data-nama_siswa');
         var kelas = button.getAttribute('data-kelas');

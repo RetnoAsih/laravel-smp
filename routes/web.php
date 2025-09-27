@@ -20,10 +20,29 @@ use App\Http\Controllers\AbsensiCon;
 use App\Http\Controllers\BeritaCon;
 use App\Models\Absensis;
 use Illuminate\Http\Request;   
+use App\Models\Siswas;
+use App\Models\Admins;
+use App\Models\Beritas;
+//use App\Models\Absensis;
+
 Route::middleware('auth')->group(function () {
-//dashboard 
+/* dashboard 
 Route::get('/_dashboard', function () {
     return view('dashhome');
+}); */
+
+Route::get('/_dashboard', function () {
+    $totalSiswa    = Siswas::count();
+    $totalBerita   = Beritas::count();
+    $totalPengguna = Admins::count();
+    $totalAbsensi  = Absensis::count();
+
+    return view('dashhome', compact(
+        'totalSiswa',
+        'totalBerita',
+        'totalPengguna',
+        'totalAbsensi'
+    ));
 });
 
 //routes Admin
@@ -112,7 +131,9 @@ Route::get('/_struktur', function () {
 Route::get('/_kepalasekolah', function () {
     return view('kepalasekolah');
 });
-
+ Route::get('/ekstra-kurikuler', function () {
+    return view('ekstrakurikuler');
+});
 Route::get('/hai', function () {
     return view('show');
 });

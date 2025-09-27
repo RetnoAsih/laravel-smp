@@ -16,7 +16,7 @@
       <li><a href="/berita/sarana-dan-prasarana" class="{{ Request::is('berita/sarana-dan-prasarana') ? 'active' : '' }}">Sarana dan Prasarana</a></li>
       <li><a href="/berita/prestasi" class="{{ Request::is('berita/prestasi') ? 'active' : '' }}">Prestasi</a></li>
       <li><a href="/berita/osis" class="{{ Request::is('berita/osis') ? 'active' : '' }}">OSIS</a></li>
-      <li><a href="/berita/ekstrakurikuler" class="{{ Request::is('berita/ekstrakurikuler') ? 'active' : '' }}">Ekstrakurikuler</a></li>
+      
     </ul>
   </li>
 

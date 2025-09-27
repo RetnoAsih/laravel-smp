@@ -39,7 +39,7 @@ public function tambahberita(Request $request)
             'judul'   => 'required',
             'isi'     => 'required',
             'penulis' => 'required',
-            'image'   => 'required|image|mimes:jpeg,png,jpg|max:5120',
+            'image'   => 'required|image|mimes:jpeg,png,jpg|max:51200',
         ]);
 
         $file = $request->file('image');

@@ -86,9 +86,8 @@
                 <img src="https://smpnu1wanareja.wordpress.com/wp-content/uploads/2024/10/tri.jpg" class="img-fluid">
                 <div class="doctor-overlay">
                   <div class="doctor-social">
-                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="bi bi-envelope"></i></a>
+                    <a href="https://www.instagram.com/whn_tr21?igsh=MTllcGZoZGt6NXNneg==" class="social-link"><i class="bi bi-instagram"></i></a>
+                    
                   </div>
                 </div>
               </div>
@@ -202,12 +201,12 @@
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="doctor-card">
               <div class="doctor-image">
-                <img src="https://smpnu1wanareja.wordpress.com/wp-content/uploads/2024/10/yayan.jpg"class="img-fluid">
+                <img src="https://smpnu1wanareja.wordpress.com/wp-content/uploads/2024/10/yayan.jpg" class="img-fluid">
                 <div class="doctor-overlay">
                   <div class="doctor-social">
-                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="bi bi-envelope"></i></a>
+                    <a href="https://www.instagram.com/belva23?igsh=YzljYTk1ODg3Zg==" target="_blank" class="social-link"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@yan25joong?_t=ZS-8zY3r57aT8j&_r=1" target="_blank" class="social-link"><i class="bi bi-tiktok"></i></a>
+                    <a href="https://www.facebook.com/share/17ByJf1Z1S/" target="_blank" class="social-link"><i class="bi bi-facebook"></i></a>
                   </div>
                 </div>
               </div>
@@ -224,7 +223,7 @@
                 <img src="https://smpnu1wanareja.wordpress.com/wp-content/uploads/2024/10/nikmah.jpg"class="img-fluid">
                 <div class="doctor-overlay">
                   <div class="doctor-social">
-                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.tiktok.com/@dhe.nik8?_t=ZS-8zWZiIRxV24&_r=1" target="_blank" class="social-link"><i class="bi bi-tiktok"></i></a>
                     <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
                     <a href="#" class="social-link"><i class="bi bi-envelope"></i></a>
                   </div>

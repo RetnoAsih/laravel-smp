@@ -21,17 +21,17 @@
                     <h1 data-aos="fade-up" data-aos-delay="200">Menyiapkan Generasi Cerdas dan Berkarakter Islami</h1>
                     <p data-aos="fade-up" data-aos-delay="250">Bersama SMP Ma'arif NU 01 Wanareja</p>
 
-                    <div class="cta-group" data-aos="fade-up" data-aos-delay="300">
+                    <!--<div class="cta-group" data-aos="fade-up" data-aos-delay="300">
                       <a href="appointment.html" class="btn btn-primary">Book Appointment</a>
                       <a href="services.html" class="btn btn-outline">Explore Services</a>
-                    </div>
+                    </div>-->
 
                     <div class="info-badges" data-aos="fade-up" data-aos-delay="350">
                       <div class="badge-item">
                         <i class="bi bi-telephone-fill"></i>
                         <div class="badge-content">
-                          <span>Emergency Line</span>
-                          <strong>+1 (555) 987-6543</strong>
+                          <span>Kontak</span>
+                          <strong>082358767313</strong>
                         </div>
                       </div>
                       <div class="badge-item">
@@ -52,7 +52,7 @@
                   <div class="col-lg-4">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="450">
                       <div class="feature-icon">
-                        <i class="bi bi-heart-pulse-fill"></i>
+                        <i class="bi bi-calendar-check"></i>
                       </div>
                       <div class="feature-text">
                         <h3>PENDAFTARAN GELOMBANG 1</h3>
@@ -68,7 +68,7 @@
                   <div class="col-lg-4">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
                       <div class="feature-icon">
-                        <i class="bi bi-lungs-fill"></i>
+                        <i class="bi bi-calendar-check"></i>
                       </div>
                       <div class="feature-text">
                         <h3>PENDAFTARAN GELOMBANG 2</h3>
@@ -84,7 +84,7 @@
                   <div class="col-lg-4">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="550">
                       <div class="feature-icon">
-                        <i class="bi bi-capsule"></i>
+                        <i class="bi bi-calendar-check"></i>
                       </div>
                       <div class="feature-text">
                         <h3>PENDAFTARAN ULANG & CEK BERKAS</h3>
@@ -109,47 +109,34 @@
         <div class="row gy-5 align-items-center">
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
             <div class="about-image">
-              <img src="assets/img/health/facilities-1.webp" alt="Modern Healthcare Facility" class="img-fluid rounded-3 mb-4">
+              <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/3P2fzU8sojA?autoplay=1&mute=1&loop=1&playlist=3P2fzU8sojA"
+          frameborder="0"
+          style="position: absolute; top:0; left:0; width:100%; height:100%;"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+  </iframe>
+</div>
+
               <div class="experience-badge">
-                <span class="years">25+</span>
-                <span class="text">Years of Excellence</span>
+                <span class="years">Garuda </span>
+                <span class="text">Nusantara</span>
               </div>
             </div>
           </div>
 
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
             <div class="about-content">
-              <h2>Committed to Exceptional Patient Care</h2>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+              <h2>Marching Band Garuda Nusantara</h2>
+              
+              <p>Garuda Nusantara adalah Marching Band yang diikuti oleh siswa-siswi SMP Ma'arif NU 01 Wanareja. </p>
+              <p>Garuda Nusantara telah mengepakkan sayapnya di berbagai acara diantaranya adalah : <ul>
+                <li>Hari Santri Nasional ke-9 tingkat kecamatan Wanareja tahun 2023</li>
+                <li>HUT RI Ke-79 tingkat desa Bantar tahun 2024</li>
+                <li>Hari Santri Nasional ke-10 tingkat kecamatan Wanareja tahun 2024</li>
+                <li>Acara Maulid Nabi dan Khatmil Qur'an di seluruh kecamatan Wanareja</li>
+              </ul></p>
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat magna eu accumsan mattis. Duis non augue in tortor facilisis tincidunt ac sit amet sapien. Suspendisse id risus non nisi sodales condimentum.</p>
-
-              <div class="row g-4 mt-4">
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                  <div class="feature-item">
-                    <div class="icon">
-                      <i class="bi bi-heart-pulse"></i>
-                    </div>
-                    <h4>Compassionate Care</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                  <div class="feature-item">
-                    <div class="icon">
-                      <i class="bi bi-star"></i>
-                    </div>
-                    <h4>Medical Excellence</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="cta-wrapper mt-4">
-                <a href="about.html" class="btn btn-primary">Learn More About Us</a>
-                <a href="#" class="btn btn-outline">Meet Our Team</a>
-              </div>
             </div>
           </div>
         </div>
@@ -172,6 +159,9 @@
               <div class="certification-item" data-aos="zoom-in" data-aos-delay="1000">
                 <img src="assets/img/tunaskelapa.png" alt="Certification">
               </div>
+              <div class="certification-item" data-aos="zoom-in" data-aos-delay="1000">
+                <img src="assets/img/logo_pmi.png" style="height:70px" alt="Certification">
+              </div>
             </div>
           </div>
         </div>
@@ -185,8 +175,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Featured Departments</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Ekstrakurikuler </h2>
+        
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -196,14 +186,15 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="department-card">
               <div class="department-image">
-                <img src="assets/img/health/cardiology-3.webp" alt="Cardiology Department" class="img-fluid">
+                <img src="uploads/berita/d89f866f-9b8b-44eb-9a76-4453e83527f8.png" alt="Cardiology Department" class="img-fluid">
+                
               </div>
               <div class="department-content">
-                <div class="department-icon">
-                  <i class="fas fa-heartbeat"></i>
-                </div>
-                <h3>Cardiology</h3>
-                <p>Comprehensive cardiovascular care with advanced diagnostic techniques and treatment options for heart conditions, ensuring optimal cardiac health for all patients.</p>
+                <!--div class="department-icon"-->
+                  <img src="assets/img/ikon panahan.png" alt="Neurology Department" class="department-icon">
+                <!--div-->
+                <h3>Panahan</h3>
+                <p>Ekstrakulikuler panahan adalah salah satu kegiatan di luar jam pelajaran yang bertujuan untuk mengem....</p>
                 <a href="department-details.html" class="btn-learn-more">
                   <span>Learn More</span>
                   <i class="fas fa-arrow-right"></i>
@@ -215,14 +206,12 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="department-card">
               <div class="department-image">
-                <img src="assets/img/health/neurology-2.webp" alt="Neurology Department" class="img-fluid">
+                <img src="uploads/berita/54dfd5cd-5dde-4f9a-ad31-294a1687a6a8.jpeg" alt="Cardiology Department" class="img-fluid"> <!--Gambar-->
               </div>
               <div class="department-content">
-                <div class="department-icon">
-                  <i class="fas fa-brain"></i>
-                </div>
-                <h3>Neurology</h3>
-                <p>Expert neurological care specializing in brain and nervous system disorders, providing cutting-edge treatments and compassionate support for neurological conditions.</p>
+                 <img src="assets/img/silat.png" alt="Neurology Department" class="department-icon"> <!--ikon/lambang-->
+                <h3>Pagar Nusa</h3>
+                <p>Pagar Nusa atau sering disingkat PN, adalah organisasi pencak silat di bawah naungan Nahdlatul U....</p>
                 <a href="department-details.html" class="btn-learn-more">
                   <span>Learn More</span>
                   <i class="fas fa-arrow-right"></i>
@@ -234,14 +223,12 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="department-card">
               <div class="department-image">
-                <img src="assets/img/health/orthopedics-4.webp" alt="Orthopedics Department" class="img-fluid">
+                <img src="uploads/berita/39bec5e8-3dbe-4748-9367-420c9fa395d4.png" alt="Cardiology Department" class="img-fluid"> <!--Gambar-->
               </div>
               <div class="department-content">
-                <div class="department-icon">
-                  <i class="fas fa-bone"></i>
-                </div>
-                <h3>Orthopedics</h3>
-                <p>Advanced musculoskeletal care focusing on bones, joints, and muscles with innovative surgical and non-surgical treatment approaches for mobility restoration.</p>
+                <img src="assets/img/hadroh.png" alt="Neurology Department" class="department-icon"> <!--ikon/lambang-->
+                <h3>Hadroh</h3>
+                <p>Hadrah adalah sebuah seni pertunjukan tradisional dalam budaya Islam yang melibatkan musik, nyanyian...</p>
                 <a href="department-details.html" class="btn-learn-more">
                   <span>Learn More</span>
                   <i class="fas fa-arrow-right"></i>
@@ -250,45 +237,9 @@
             </div>
           </div><!-- End Department Card -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="department-card">
-              <div class="department-image">
-                <img src="assets/img/health/pediatrics-3.webp" alt="Pediatrics Department" class="img-fluid">
-              </div>
-              <div class="department-content">
-                <div class="department-icon">
-                  <i class="fas fa-baby"></i>
-                </div>
-                <h3>Pediatrics</h3>
-                <p>Specialized healthcare for children from infancy through adolescence, offering comprehensive medical care in a child-friendly environment with experienced pediatric specialists.</p>
-                <a href="department-details.html" class="btn-learn-more">
-                  <span>Learn More</span>
-                  <i class="fas fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div><!-- End Department Card -->
+          
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="department-card">
-              <div class="department-image">
-                <img src="assets/img/health/oncology-4.webp" alt="Oncology Department" class="img-fluid">
-              </div>
-              <div class="department-content">
-                <div class="department-icon">
-                  <i class="fas fa-shield-alt"></i>
-                </div>
-                <h3>Oncology</h3>
-                <p>Comprehensive cancer care with multidisciplinary approach, offering advanced treatment options, clinical trials, and compassionate support throughout the cancer journey.</p>
-                <a href="department-details.html" class="btn-learn-more">
-                  <span>Learn More</span>
-                  <i class="fas fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div><!-- End Department Card -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <!--<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="department-card">
               <div class="department-image">
                 <img src="assets/img/health/emergency-2.webp" alt="Emergency Department" class="img-fluid">
@@ -305,7 +256,7 @@
                 </a>
               </div>
             </div>
-          </div><!-- End Department Card -->
+          </div> End Department Card --> 
 
         </div>
 
@@ -313,14 +264,14 @@
 
     </section><!-- /Featured Departments Section -->
 
-    <!-- Featured Services Section -->
+    <!-- Featured Services Section 
     <section id="featured-services" class="featured-services section light-background">
 
-      <!-- Section Title -->
+      
       <div class="container section-title" data-aos="fade-up">
         <h2>Featured Services</h2>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -345,7 +296,7 @@
                 </a>
               </div>
             </div>
-          </div><!-- End Service Card -->
+          </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-card">
@@ -366,8 +317,7 @@
                 </a>
               </div>
             </div>
-          </div><!-- End Service Card -->
-
+          </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
             <div class="service-card">
               <div class="service-icon">
@@ -387,7 +337,7 @@
                 </a>
               </div>
             </div>
-          </div><!-- End Service Card -->
+          </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
             <div class="service-card">
@@ -408,22 +358,22 @@
                 </a>
               </div>
             </div>
-          </div><!-- End Service Card -->
+          </div>
 
         </div>
 
       </div>
 
-    </section><!-- /Featured Services Section -->
+    </section> /Featured Services Section -->
 
-    <!-- Find A Doctor Section -->
+    <!-- Find A Doctor Section 
     <section id="find-a-doctor" class="find-a-doctor section">
 
-      <!-- Section Title -->
+      
       <div class="container section-title" data-aos="fade-up">
         <h2>Find A Doctor</h2>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -484,7 +434,7 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Doctor Card -->
+          </div>
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="doctor-card">
@@ -510,7 +460,7 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Doctor Card -->
+          </div>
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="doctor-card">
@@ -536,7 +486,7 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Doctor Card -->
+          </div>
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="doctor-card">
@@ -562,7 +512,7 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Doctor Card -->
+          </div>
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="doctor-card">
@@ -588,8 +538,7 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Doctor Card -->
-
+          </div>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="doctor-card">
               <div class="doctor-image">
@@ -614,15 +563,15 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Doctor Card -->
+          </div>
 
         </div>
 
       </div>
 
-    </section><!-- /Find A Doctor Section -->
+    </section> /Find A Doctor Section -->
 
-    <!-- Call To Action Section -->
+    <!-- Call To Action Section
     <section id="call-to-action" class="call-to-action section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -709,22 +658,22 @@
 
       </div>
 
-    </section><!-- /Call To Action Section -->
+    </section> /Call To Action Section -->
 
-    <!-- Emergency Info Section -->
+    <!-- Emergency Info Section 
     <section id="emergency-info" class="emergency-info section">
-      <!-- Section Title -->
+     
       <div class="container section-title" data-aos="fade-up">
         <h2>Emergency Info</h2>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
 
-            <!-- Emergency Alert Banner -->
+            
             <div class="emergency-alert" data-aos="zoom-in" data-aos-delay="100">
               <div class="alert-icon">
                 <i class="bi bi-exclamation-triangle-fill"></i>
@@ -739,9 +688,9 @@
                   Call 911
                 </a>
               </div>
-            </div><!-- End Emergency Alert -->
+            </div>
 
-            <!-- Emergency Contact Grid -->
+            
             <div class="row emergency-contacts" data-aos="fade-up" data-aos-delay="200">
 
               <div class="col-md-6 mb-4">
@@ -765,7 +714,7 @@
                     <a href="tel:+15551234567" class="btn btn-contact">Call Now</a>
                   </div>
                 </div>
-              </div><!-- End Emergency Room Card -->
+              </div>
 
               <div class="col-md-6 mb-4">
                 <div class="contact-card">
@@ -788,7 +737,7 @@
                     <a href="tel:+15559876543" class="btn btn-contact">Call Now</a>
                   </div>
                 </div>
-              </div><!-- End Urgent Care Card -->
+              </div>
 
               <div class="col-md-6 mb-4">
                 <div class="contact-card">
@@ -808,8 +757,7 @@
                     <a href="tel:+15554567890" class="btn btn-contact">Call Now</a>
                   </div>
                 </div>
-              </div><!-- End Nurse Helpline Card -->
-
+              </div>
               <div class="col-md-6 mb-4">
                 <div class="contact-card">
                   <div class="card-icon">
@@ -828,11 +776,11 @@
                     <a href="tel:18002221222" class="btn btn-contact">Call Now</a>
                   </div>
                 </div>
-              </div><!-- End Poison Control Card -->
+              </div>
 
-            </div><!-- End Emergency Contacts -->
+            </div>
 
-            <!-- Quick Actions -->
+            
             <div class="quick-actions" data-aos="fade-up" data-aos-delay="300">
               <h4>Quick Actions</h4>
               <div class="row">
@@ -861,9 +809,9 @@
                   </a>
                 </div>
               </div>
-            </div><!-- End Quick Actions -->
+            </div>
 
-            <!-- Emergency Preparation Tips -->
+           
             <div class="emergency-tips" data-aos="fade-up" data-aos-delay="400">
               <h4>When to Seek Emergency Care</h4>
               <div class="row">
@@ -884,14 +832,14 @@
                   </ul>
                 </div>
               </div>
-            </div><!-- End Emergency Tips -->
+            </div>
 
           </div>
         </div>
 
       </div>
 
-    </section><!-- /Emergency Info Section -->
+    </section> /Emergency Info Section -->
 
   </main>
 @include('footer')
