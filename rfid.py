@@ -6,7 +6,7 @@ arduino_port = 'COM4'
 baud_rate = 9600
 
 # Koneksi ke MySQL (XAMPP)
-db = mysql.connector.connect(
+db = latihandb.connector.connect(
     host="localhost",
     user="root",
     password="",      # default XAMPP tanpa password

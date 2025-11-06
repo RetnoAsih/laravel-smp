@@ -44,7 +44,7 @@
     <ul>
       <li><a href="/berita/wali-kelas" class="{{ Request::is('berita/wali-kelas') ? 'active' : '' }}">Wali Kelas</a></li>
       <li><a href="/berita/kurikulum" class="{{ Request::is('berita/kurikulum') ? 'active' : '' }}">Kurikulum</a></li>
-      <li><a href="/berita/jadwal-pelajaran" class="{{ Request::is('berita/jadwal-pelajaran') ? 'active' : '' }}">Jadwal Pelajaran</a></li>
+      <li><a href="/_jadwal" class="{{ Request::is('_jadwal') ? 'active' : '' }}">Jadwal Pelajaran</a></li>
       <li><a href="https://pdk.jatengprov.go.id/wp-content/uploads/2025/07/PEDOMAN-PENYUSUNAN-KALDIK-2025-2026-.pdf#page=46" target="_blank">Kalender Pendidikan</a></li>
       <li><a href="/berita/tata-tertib-smp-maarif-nu-01-wanareja" class="{{ Request::is('berita/tata-tertib-smp-maarif-nu-01-wanareja') ? 'active' : '' }}">Tata Tertib</a></li>
       <li><a href="https://classroom.google.com/" target="_blank">E-Learning</a></li>

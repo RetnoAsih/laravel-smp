@@ -82,7 +82,7 @@
 
 @include('footerbar')
 
-<!-- MODAL TAMBAH ADMIN -->
+<!-- MODAL TAMBAH BERITA -->
 <div class="modal fade" id="tambahAdminModal" tabindex="-1" aria-labelledby="tambahAdminModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">

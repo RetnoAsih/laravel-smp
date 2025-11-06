@@ -2,7 +2,7 @@ import serial
 import mysql.connector
 
 # Koneksi ke MySQL
-db = mysql.connector.connect(
+db = latihandb.connector.connect(
     host="localhost",
     user="root",
     password="",

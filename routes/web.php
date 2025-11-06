@@ -125,6 +125,9 @@ Route::get('/visi-misi', function () {
 Route::get('/_sejarah', function () {
     return view('sejarah');
 });
+Route::get('/_jadwal', function () {
+    return view('jadwal');
+});
 Route::get('/_struktur', function () {
     return view('strukturorg');
 });
@@ -152,3 +155,9 @@ Route::get('/dashboard', function () {
 use App\Http\Controllers\ImageController;
 
 Route::post('/upload-image', [ImageController::class, 'upload'])->name('upload.image');
+
+// di routes/web.php
+use App\Http\Controllers\RfidController;
+
+Route::post('/rfid', [RfidController::class, 'store'])
+     ->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);

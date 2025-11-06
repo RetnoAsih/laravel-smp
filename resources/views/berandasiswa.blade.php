@@ -116,14 +116,22 @@
               <div class="mb-3">
                 <label class="form-label">Kelas</label>
                 <select class="form-select" id="kelas" name="kelas">
-    <option selected disabled>Pilih salah satu</option>
-    <option value="7">7</option>
-    <option value="8">8</option>
-    <option value="9">9</option>
-    
-  </select>
+                  <option selected disabled>Pilih salah satu</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  
+                </select>
               </div>
             </div>
+
+            <div class="col-md-6">
+      <div class="mb-3">
+        <label class="form-label">Foto</label>
+        <input type="file" name="image" class="form-control" required>
+      </div>
+    </div>
+
           </div>
           <div class="text-end">
             <button type="submit" class="btn btn-primary">Simpan</button>
