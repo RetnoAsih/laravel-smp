@@ -45,12 +45,13 @@
         data-uid="{{ $ds->uid }}"
         data-nama_siswa="{{ $ds->nama_siswa }}"
         data-kelas="{{ $ds->kelas }}"
-        data-no_hp="{{ $ds->no_hp }}">
+        data-no_hp="{{ $ds->no_hp }}"
+        data-foto="{{ $ds->foto }}">
         Edit
     </button>
 
                 <!-- Tombol Hapus -->
-                <form action="{{ route('siswa.destroy', $ds->id) }}" method="POST" style="display:inline;">
+                <form action="{{ route('siswa.destroy', $ds->id) }}" method="POST" style="display:inline;" >
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus siswa ini?')">
@@ -85,7 +86,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="{{ route('siswa.tambahsiswa') }}" method="POST">
+        <form action="{{ route('siswa.tambahsiswa') }}" method="POST" enctype="multipart/form-data">
           @csrf
           <div class="row">
             <div class="col-md-6">
@@ -151,55 +152,73 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form id="formEditAdmin" method="POST">
-          @csrf
-          @method('PUT')
-          <div class="row">
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label class="form-label">RFID</label>
-                <input type="text" id="edit_uid" name="uid" class="form-control" >
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label class="form-label">Nama Siswa</label>
-                <input type="text" id="edit_nama_siswa" name="nama_siswa" class="form-control" required>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label class="form-label">Password (Kosongkan jika tidak diubah)</label>
-                <input type="text" id="edit_password" name="password" class="form-control">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label class="form-label">No HP</label>
-                <input type="text" id="edit_no_hp" name="no_hp" class="form-control" required>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label class="form-label">Kelas</label>
-                <select class="form-select" id="edit_kelas" name="kelas" required>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="text-end">
-            <button type="submit" class="btn btn-primary">Update</button>
-          </div>
-        </form>
+        <form id="formEditAdmin" method="POST" enctype="multipart/form-data">
+  @csrf
+  @method('PUT')
+  <div class="row">
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label class="form-label">RFID</label>
+        <input type="text" id="edit_uid" name="uid" class="form-control">
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label class="form-label">Nama Siswa</label>
+        <input type="text" id="edit_nama_siswa" name="nama_siswa" class="form-control" required>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label class="form-label">Password (Kosongkan jika tidak diubah)</label>
+        <input type="text" id="edit_password" name="password" class="form-control">
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label class="form-label">No HP</label>
+        <input type="text" id="edit_no_hp" name="no_hp" class="form-control" required>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label class="form-label">Kelas</label>
+        <select class="form-select" id="edit_kelas" name="kelas" required>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Tambahan: Upload Foto -->
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label class="form-label">Foto Siswa</label>
+        <input type="file" id="edit_foto" name="foto" class="form-control" accept="image/*">
+      </div>
+      <!-- Preview foto -->
+      <div class="mt-2">
+        <img id="preview_foto" src="#" alt="Preview Foto" style="max-height: 100px; display: none; border-radius: 8px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="text-end">
+    <button type="submit" class="btn btn-primary">Update</button>
+  </div>
+</form>
+
       </div>
     </div>
   </div>
 </div>
 
-<script>
+<script>/*
 document.addEventListener('DOMContentLoaded', function () {
     var editModal = document.getElementById('editAdminModal');
     editModal.addEventListener('show.bs.modal', function (event) {
@@ -220,6 +239,56 @@ document.addEventListener('DOMContentLoaded', function () {
         // Set action URL untuk update
         document.getElementById('formEditAdmin').action = '/siswa/' + id;
     });
+});*/
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var editModal = document.getElementById('editAdminModal');
+    editModal.addEventListener('show.bs.modal', function (event) {
+        var button = event.relatedTarget;
+
+        // Ambil data dari tombol
+        var id = button.getAttribute('data-id');
+        var uid = button.getAttribute('data-uid');
+        var nama_siswa = button.getAttribute('data-nama_siswa');
+        var kelas = button.getAttribute('data-kelas');
+        var no_hp = button.getAttribute('data-no_hp');
+        var foto = button.getAttribute('data-foto'); // Tambahan: ambil foto
+
+        // Isi form
+        document.getElementById('edit_uid').value = uid || '';
+        document.getElementById('edit_nama_siswa').value = nama_siswa || '';
+        document.getElementById('edit_kelas').value = kelas || '';
+        document.getElementById('edit_no_hp').value = no_hp || '';
+
+        // Update action form
+        document.getElementById('formEditAdmin').action = '/siswa/' + id;
+
+        // Tampilkan foto lama kalau ada
+        var preview = document.getElementById('preview_foto');
+        if (foto) {
+            preview.src = '/'+foto; // pastikan path-nya sesuai
+            preview.style.display = 'block';
+        } else {
+            preview.src = '{{ asset("assets/img/wallpapersmp.png") }}'; // fallback foto default
+            preview.style.display = 'block';
+        }
+
+        // Reset input file setiap kali modal dibuka
+        document.getElementById('edit_foto').value = '';
+    });
+
+    // Preview foto baru sebelum upload
+    document.getElementById('edit_foto').addEventListener('change', function (event) {
+        const [file] = event.target.files;
+        const preview = document.getElementById('preview_foto');
+        if (file) {
+            preview.src = URL.createObjectURL(file);
+            preview.style.display = 'block';
+        }
+    });
 });
 </script>
+
 

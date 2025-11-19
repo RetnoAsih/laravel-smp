@@ -18,6 +18,7 @@ use App\Http\Controllers\AdminsCon;
 use App\Http\Controllers\SiswaCon;
 use App\Http\Controllers\AbsensiCon;
 use App\Http\Controllers\BeritaCon;
+use App\Http\Controllers\DashboardController;
 use App\Models\Absensis;
 use Illuminate\Http\Request;   
 use App\Models\Siswas;
@@ -31,7 +32,7 @@ Route::get('/_dashboard', function () {
     return view('dashhome');
 }); */
 
-Route::get('/_dashboard', function () {
+/*Route::get('/_dashboard', function () {
     $totalSiswa    = Siswas::count();
     $totalBerita   = Beritas::count();
     $totalPengguna = Admins::count();
@@ -43,7 +44,11 @@ Route::get('/_dashboard', function () {
         'totalPengguna',
         'totalAbsensi'
     ));
-});
+});*/
+
+
+Route::get('/_dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
 
 //routes Admin
 Route::get('/admins', [AdminsCon::class, 'index']);
@@ -161,3 +166,9 @@ use App\Http\Controllers\RfidController;
 
 Route::post('/rfid', [RfidController::class, 'store'])
      ->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
+
+use App\Http\Controllers\SettingController;
+
+Route::get('/settings/edit', [SettingController::class, 'edit'])->name('settings.edit');
+Route::put('/settings/update', [SettingController::class, 'update'])->name('settings.update');
+

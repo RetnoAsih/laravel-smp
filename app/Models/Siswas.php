@@ -23,6 +23,8 @@ protected $primaryKey = 'id'; // Kolom primary key
         'kelas',
         'no_hp',
         'password',
+        'foto',
+
     ];
 
     /**

@@ -1,3 +1,15 @@
+@php
+    $pageTitle = match (true) {
+        Request::is('_dashboard') => 'Dashboard',
+        Request::is('siswa') => 'Kelola Siswa',
+        Request::is('absensi') => 'Kelola Absensi',
+        Request::is('admins') => 'Kelola Admin',
+        Request::is('berita') => 'Kelola Berita',
+        Request::is('modestandby') => 'Mode Standby',
+        Request::is('settings/edit') => 'Setting',
+        default => '',
+    };
+@endphp
 
   <main class="main-content position-relative border-radius-lg ">
     <!-- Navbar -->
@@ -8,23 +20,12 @@
     <li class="breadcrumb-item text-sm">
         <a class="opacity-5 text-white" href="/_dashboard">Pages</a>
     </li>
-
-    @if (Request::is('_dashboard'))
-        <li class="breadcrumb-item text-sm text-white active" aria-current="page">Dashboard</li>
-    @elseif (Request::is('siswa'))
-        <li class="breadcrumb-item text-sm text-white active" aria-current="page">Kelola Siswa</li>
-    @elseif (Request::is('absensi'))
-        <li class="breadcrumb-item text-sm text-white active" aria-current="page">Kelola Absensi</li>
-    @elseif (Request::is('admins'))
-        <li class="breadcrumb-item text-sm text-white active" aria-current="page">Kelola Admin</li>
-    @elseif (Request::is('berita'))
-        <li class="breadcrumb-item text-sm text-white active" aria-current="page">Kelola Berita</li>
-    @elseif (Request::is('modestandby'))
-        <li class="breadcrumb-item text-sm text-white active" aria-current="page">Mode Standby</li>
-    @endif
+<li class="breadcrumb-item text-sm text-white active" aria-current="page">
+        {{ $pageTitle }}
+    </li>
 </ol>
 
-          <h6 class="font-weight-bolder text-white mb-0">Dashboard</h6>
+          <h6 class="font-weight-bolder text-white mb-0">{{ $pageTitle }}</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">

@@ -26,7 +26,7 @@
     <li class="nav-item">
         <a class="nav-link {{ Request::is('siswa*') ? 'active' : '' }}" href="/siswa">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="ni ni-calendar-grid-58 text-dark text-sm opacity-10"></i>
+                <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Kelola Siswa</span>
         </a>
@@ -35,7 +35,7 @@
     <li class="nav-item">
         <a class="nav-link {{ Request::is('absensi*') ? 'active' : '' }}" href="/absensi">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="ni ni-credit-card text-dark text-sm opacity-10"></i>
+                <i class="ni ni-calendar-grid-58 text-dark text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Kelola Absensi</span>
         </a>
@@ -44,7 +44,7 @@
     <li class="nav-item">
         <a class="nav-link {{ Request::is('admins*') ? 'active' : '' }}" href="/admins">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="ni ni-credit-card text-dark text-sm opacity-10"></i>
+                <i class="ni ni-single-copy-04 text-dark text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Kelola Admin</span>
         </a>
@@ -53,7 +53,7 @@
     <li class="nav-item">
         <a class="nav-link {{ Request::is('berita*') ? 'active' : '' }}" href="/berita">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="ni ni-credit-card text-dark text-sm opacity-10"></i>
+                <i class="ni ni-folder-17 text-dark text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Kelola Berita</span>
         </a>
@@ -69,9 +69,19 @@
     </li>
 
     <li class="nav-item">
+        <a class="nav-link {{ Request::is('settings/edit') ? 'active' : '' }}" href="/settings/edit">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="ni ni-settings-gear-65
+ text-dark text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Setting</span>
+        </a>
+    </li>
+
+    <li class="nav-item">
         <a class="nav-link" href="/logout">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="ni ni-collection text-dark text-sm opacity-10"></i>
+                <i class="ni ni-user-run text-dark text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Keluar</span>
         </a>

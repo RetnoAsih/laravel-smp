@@ -102,8 +102,8 @@
     overflow: hidden; /* biar rapi */
     padding: 10px;
     border-radius: 20px;
-    background-color: #000;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); /* x, y, blur, warna */
+    /*background-color: #000;
+    /*box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); /* x, y, blur, warna */
 }
 
 .wallpaper img {
@@ -113,6 +113,13 @@
     object-position: top; /* posisikan di atas */
     display: block;
     border-radius: 10px; /* hilangkan gap inline img */
+
+    max-height: 300px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: auto;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 .marquee {
     overflow: hidden;

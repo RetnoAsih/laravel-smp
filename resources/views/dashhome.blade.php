@@ -115,7 +115,7 @@
         <div class="col-lg-7 mb-lg-0 mb-4">
           <div class="card z-index-2 h-100">
             <div class="card-header pb-0 pt-3 bg-transparent">
-              <h6 class="text-capitalize">Sales overview</h6>
+              <h6 class="text-capitalize">Grafik</h6>
               <p class="text-sm mb-0">
                 <i class="fa fa-arrow-up text-success"></i>
                 <span class="font-weight-bold">4% more</span> in 2021
@@ -175,146 +175,108 @@
           </div>
         </div>
       </div>
+
+
       <div class="row mt-4">
         <div class="col-lg-7 mb-lg-0 mb-4">
           <div class="card ">
             <div class="card-header pb-0 p-3">
               <div class="d-flex justify-content-between">
-                <h6 class="mb-2">Sales by Country</h6>
+              <h6 class="mb-2">
+                  Rekap Absensi Bulan {{ now()->translatedFormat('F') }}
+              </h6>
+              <form method="GET" action="{{ route('dashboard') }}">
+    <select name="bulan" onchange="this.form.submit()">
+        @for ($m = 1; $m <= 12; $m++)
+            <option value="{{ $m }}" {{ $bulan == $m ? 'selected' : '' }}>
+                {{ \Carbon\Carbon::create()->month($m)->translatedFormat('F') }}
+            </option>
+        @endfor
+    </select>
+</form>
+
+
+
+
               </div>
             </div>
+             @php
+    $today = now()->day;  @endphp
             <div class="table-responsive">
               <table class="table align-items-center ">
                 <tbody>
                   <tr>
-                    <td class="w-30">
-                      <div class="d-flex px-2 py-1 align-items-center">
-                        <div>
-                          <img src="{{ asset('dashboard/assets/img/icons/flags/US.png') }}" alt="Country flag">
-                        </div>
-                        <div class="ms-4">
-                          <p class="text-xs font-weight-bold mb-0">Country:</p>
-                          <h6 class="text-sm mb-0">United States</h6>
-                        </div>
-                      </div>
+                    <td rowspan="2">
+                      Nama
                     </td>
-                    <td>
-                      <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                        <h6 class="text-sm mb-0">2500</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Value:</p>
-                        <h6 class="text-sm mb-0">$230,900</h6>
-                      </div>
-                    </td>
-                    <td class="align-middle text-sm">
-                      <div class="col text-center">
-                        <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                        <h6 class="text-sm mb-0">29.9%</h6>
-                      </div>
-                    </td>
+                    <td colspan="31">Tanggal</td>
                   </tr>
                   <tr>
-                    <td class="w-30">
-                      <div class="d-flex px-2 py-1 align-items-center">
-                        <div>
-                          <img src="{{ asset('dashboard/assets/img/icons/flags/DE.png') }}" alt="Country flag">
-                        </div>
-                        <div class="ms-4">
-                          <p class="text-xs font-weight-bold mb-0">Country:</p>
-                          <h6 class="text-sm mb-0">Germany</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                        <h6 class="text-sm mb-0">3.900</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Value:</p>
-                        <h6 class="text-sm mb-0">$440,000</h6>
-                      </div>
-                    </td>
-                    <td class="align-middle text-sm">
-                      <div class="col text-center">
-                        <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                        <h6 class="text-sm mb-0">40.22%</h6>
-                      </div>
-                    </td>
+                  @for ($i = 1; $i <= $lastDay; $i++)
+
+    @php
+        // Tanggal hari ini (format angka, misalnya 5, 12, 27)
+        $todayDate = now()->day;
+
+        // Jika bulan yang dipilih adalah bulan ini dan tanggal sama → beri border biru
+        $isToday = ($bulan == now()->month && $i == $todayDate);
+
+        $style = $isToday ? 'background-color: #E8F0FE; border-radius: 6px;border: 2px solid blue; font-weight:bold; color:blue;' : '';
+    @endphp
+
+    <td style="{{ $style }}">{{ $i }}</td>
+
+@endfor
+
                   </tr>
-                  <tr>
-                    <td class="w-30">
-                      <div class="d-flex px-2 py-1 align-items-center">
-                        <div>
-                          <img src="{{ asset('dashboard/assets/img/icons/flags/GB.png') }}" alt="Country flag">
-                        </div>
-                        <div class="ms-4">
-                          <p class="text-xs font-weight-bold mb-0">Country:</p>
-                          <h6 class="text-sm mb-0">Great Britain</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                        <h6 class="text-sm mb-0">1.400</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Value:</p>
-                        <h6 class="text-sm mb-0">$190,700</h6>
-                      </div>
-                    </td>
-                    <td class="align-middle text-sm">
-                      <div class="col text-center">
-                        <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                        <h6 class="text-sm mb-0">23.44%</h6>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="w-30">
-                      <div class="d-flex px-2 py-1 align-items-center">
-                        <div>
-                          <img src="{{ asset('dashboard/assets/img/icons/flags/BR.png') }}" alt="Country flag">
-                        </div>
-                        <div class="ms-4">
-                          <p class="text-xs font-weight-bold mb-0">Country:</p>
-                          <h6 class="text-sm mb-0">Brasil</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                        <h6 class="text-sm mb-0">562</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Value:</p>
-                        <h6 class="text-sm mb-0">$143,960</h6>
-                      </div>
-                    </td>
-                    <td class="align-middle text-sm">
-                      <div class="col text-center">
-                        <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                        <h6 class="text-sm mb-0">32.14%</h6>
-                      </div>
-                    </td>
-                  </tr>
+
+                  @forelse ($datasiswa as $s)
+    <tr>
+        <td>{{ $s->nama_siswa }}</td>
+
+        @for ($i = 1; $i <= $lastDay; $i++)
+
+            @php
+                // Bentuk tanggal sesuai bulan & tahun yang dipilih
+                $tanggalLoop = \Carbon\Carbon::create(null, $bulan, $i)->format('Y-m-d');
+
+                // Cari absensi berdasarkan tanggal & siswa
+                $absen = $dataabsensi
+                    ->where('id_siswa', $s->uid)
+                    ->filter(function ($item) use ($tanggalLoop) {
+                        return \Carbon\Carbon::parse($item->waktu)->format('Y-m-d') === $tanggalLoop;
+                    })
+                    ->first();
+
+                // Warna jika hadir
+                $color = $absen ? 'green' : 'white';
+            @endphp
+
+            <td style="background-color: {{ $color }}; text-align:center;">
+                {{ $absen ? 'H' : '-' }}
+            </td>
+
+        @endfor
+
+    </tr>
+@empty
+    <tr>
+        <td colspan="{{ $lastDay + 1 }}">Tidak ada data siswa.</td>
+    </tr>
+@endforelse
+
+
+
+                  
+                  
+                  
                 </tbody>
               </table>
             </div>
           </div>
         </div>
+
+
         <div class="col-lg-5">
           <div class="card">
             <div class="card-header pb-0 p-3">
@@ -390,12 +352,7 @@
           <div class="row align-items-center justify-content-lg-between">
             <div class="col-lg-6 mb-lg-0 mb-4">
               <div class="copyright text-center text-sm text-muted text-lg-start">
-                © <script>
-                  document.write(new Date().getFullYear())
-                </script>,
-                made with <i class="fa fa-heart"></i> by
-                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative Tim</a>
-                for a better web.
+                
               </div>
             </div>
             <div class="col-lg-6">

@@ -81,8 +81,20 @@ while True:
             print(f"Absensi tersimpan untuk {siswa['nama_siswa']}")
 
             # Dapatkan jam sekarang (WIB)
+            #now = datetime.now().time()
+            #batas = datetime.strptime("10:00", "%H:%M").time()
+            # Dapatkan jam sekarang (WIB)
             now = datetime.now().time()
-            batas = datetime.strptime("10:00", "%H:%M").time()
+
+            # Ambil jam batas dari DB (tabel settings)
+            cursor.execute("SELECT value FROM settings WHERE `key` = 'batas_jam'")
+            result = cursor.fetchone()
+
+            if result:
+                batas = datetime.strptime(result["value"], "%H:%M").time()
+            else:
+                batas = datetime.strptime("10:00", "%H:%M").time()  # fallback jika tidak ada
+
 
             # Tentukan suara berdasarkan jam
             if now > batas:

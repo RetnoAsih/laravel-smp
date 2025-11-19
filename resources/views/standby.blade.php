@@ -72,7 +72,14 @@ Waktu: <span class="textkuning" id="waktu">{{ $absensiTerbaru->waktu ?? '-' }}</
           </div>
           <div class="inner-60">
              <div class="wallpaper">
-                <img src="{{ asset('assets/img/wallpapersmp.png') }}" alt="" >
+                <img 
+      id="foto"
+      src="{{ $absensiTerbaru->siswa && $absensiTerbaru->siswa->foto 
+            ? asset($absensiTerbaru->siswa->foto) 
+            : asset('assets/img/wallpapersmp.png') }}" 
+      alt="Foto Siswa"
+      >
+
               </div>
           </div>
         </div>
@@ -163,7 +170,7 @@ updateJam(); // panggil sekali biar langsung muncul
 
 
 <script>
-  //load absensi terbaru
+  /*load absensi terbaru
     function loadAbsensiTerbaru() {
         fetch('/absensi/terbaru')
             .then(res => res.json())
@@ -171,9 +178,35 @@ updateJam(); // panggil sekali biar langsung muncul
                 document.getElementById('nama-siswa').textContent = data?.siswa?.nama_siswa || '-';
                 document.getElementById('kelas').textContent = data?.siswa?.kelas || '-';
                 document.getElementById('waktu').textContent = data?.waktu || '-';
+               
             });
     }
 
     // Update tiap 5 detik
-    setInterval(loadAbsensiTerbaru, 1000);
+    setInterval(loadAbsensiTerbaru, 1000);  */ 
+</script>
+
+<script>
+function loadAbsensiTerbaru() {
+  fetch('/absensi/terbaru')
+    .then(res => res.json())
+    .then(data => {
+      // Update teks
+      document.getElementById('nama-siswa').textContent = data?.siswa?.nama_siswa || '-';
+      document.getElementById('kelas').textContent = data?.siswa?.kelas || '-';
+      document.getElementById('waktu').textContent = data?.waktu || '-';
+
+      // Update foto
+      const fotoEl = document.getElementById('foto');
+      const fotoPath = data?.siswa?.foto 
+        ? `{{ asset('') }}` + data.siswa.foto  // path relatif ke public/
+        : `{{ asset('assets/img/wallpapersmp.png') }}`; // default
+
+      fotoEl.src = fotoPath;
+    })
+    .catch(err => console.error('Gagal memuat absensi:', err));
+}
+
+// Update tiap 1 detik
+setInterval(loadAbsensiTerbaru, 1000);
 </script>
