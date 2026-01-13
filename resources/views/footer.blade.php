@@ -69,6 +69,37 @@
 
   <!-- Main JS File -->
   <script src="{{ asset('assets/js/main.js')}}"></script>
+   @if(session('success'))
+<script>
+Toastify({
+    text: @json(session('success')),
+    duration: 4000,
+    gravity: "top",   // "top" or "bottom"
+    position: "right", // "left", "center" or "right"
+    close: true,
+    stopOnFocus: true,
+    style: {
+        background: "linear-gradient(to right, #00c853, #00e676)",
+    }
+}).showToast();
+</script>
+@endif
+
+@if(session('error'))
+<script>
+Toastify({
+    text: @json(session('error')),
+    duration: 4000,
+    gravity: "top",
+    position: "right",
+    close: true,
+    stopOnFocus: true,
+    style: {
+        background: "linear-gradient(to right, #c62828, #ff5252)",
+    }
+}).showToast();
+</script>
+@endif
 
 </body>
 

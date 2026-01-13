@@ -6,7 +6,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('dashboard/assets/img/apple-icon.png') }}">
-  <link rel="icon" type="image/png" href="{{ asset('dashboard/assets/img/favicon.png') }}">
+  <link href="{{ asset('assets/img/logosmp.png') }}" rel="icon">
   <title>
     Dashboard SMP MA'ARIF NU 01 WANAREJA
   </title>
@@ -64,10 +64,6 @@ Kelas: <span class="textkuning" id="kelas">{{ $absensiTerbaru->siswa->kelas ?? '
 Waktu: <span class="textkuning" id="waktu">{{ $absensiTerbaru->waktu ?? '-' }}</span>
               </span>
             </div>
-            
-              
-            
-          
           
           </div>
           <div class="inner-60">

@@ -7,6 +7,7 @@
         Request::is('berita') => 'Kelola Berita',
         Request::is('modestandby') => 'Mode Standby',
         Request::is('settings/edit') => 'Setting',
+        Request::is('pelajaran') => 'Jadwal Pelajaran',
         default => '',
     };
 @endphp

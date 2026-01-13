@@ -41,4 +41,9 @@ protected $primaryKey = 'id'; // Kolom primary key
      */
     public $timestamps = false;
 
+    public function jadwal()
+    {
+        return $this->hasMany(Jadwal::class, 'id_guru', 'id');
+    }
+
 }

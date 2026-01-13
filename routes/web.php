@@ -100,7 +100,12 @@ Route::get('/_berita', [BeritaCon::class, 'katalog']);
 Route::get('/berita/{slug}', [BeritaCon::class, 'show'])->name('show');
 
 Route::get('/', function () {
+    //return view('home');
+    return view('login');
+});
+Route::get('/home', function () {
     return view('home');
+    
 });
 
 Route::get('/profil', function () {
@@ -126,6 +131,9 @@ Route::get('/dbtest', function () {
 });
 Route::get('/visi-misi', function () {
     return view('visimisi');
+});
+Route::get('/sample', function () {
+    return view('dashboard');
 });
 Route::get('/_sejarah', function () {
     return view('sejarah');
@@ -172,3 +180,64 @@ use App\Http\Controllers\SettingController;
 Route::get('/settings/edit', [SettingController::class, 'edit'])->name('settings.edit');
 Route::put('/settings/update', [SettingController::class, 'update'])->name('settings.update');
 
+Route::get('/cek-saungwa', function () {
+    try {
+        $response = Http::withHeaders([
+            'appkey'  => env('SAUNGWA_APPKEY'),
+            'authkey' => env('SAUNGWA_AUTHKEY'),
+        ])
+        ->timeout(5)
+        ->get('https://app.saungwa.com/api/create-message');
+
+        // Jika respons masih dapat dijangkau (status code 200/400/401/…)
+        if ($response->status()) {
+            return ['connected' => true];
+        }
+
+        return ['connected' => false];
+
+    } catch (\Exception $e) {
+        return ['connected' => false];
+    }
+});
+
+Route::get('/cek-internet', function () {
+
+    try {
+        // ping cepat + tidak download konten besar
+        $response = Http::timeout(5)
+        ->get("https://www.google.com/generate_204"); // Ini khusus untuk ping internet
+
+        // Status 204 = tanda internet OK
+        if ($response->status() === 204) {
+            return ['connected' => true];
+        }
+
+        return ['connected' => false];
+
+    } catch (\Exception $e) {
+        return ['connected' => false];
+    }
+});
+
+use App\Http\Controllers\PelajaranController;
+
+
+
+
+//routes Pelajaran
+//Route::get('/admins', [AdminsCon::class, 'index']);
+Route::get('/pelajaran', [PelajaranController::class, 'index']);
+Route::post('/pelajaran/tambahpelajaran', [PelajaranController::class, 'tambahpelajaran'])->name('pelajaran.tambahpelajaran'); 
+Route::get('/pelajaran/{id}/edit', [PelajaranController::class, 'edit'])->name('pelajaran.edit');
+Route::delete('/pelajaran/{id}', [PelajaranController::class, 'destroy'])->name('pelajaran.destroy'); 
+Route::put('/pelajaran/{id}', [PelajaranController::class, 'update'])->name('pelajaran.update');
+
+//routes Jadwal
+use App\Http\Controllers\JadwalController;
+//Route::get('/admins', [AdminsCon::class, 'index']);
+Route::get('/jadwal_guru', [JadwalController::class, 'index']);
+Route::post('/jadwal/tambahjadwal', [JadwalController::class, 'tambahjadwal'])->name('jadwal.tambahjadwal'); 
+Route::get('/jadwal/{id}/edit', [JadwalController::class, 'edit'])->name('jadwal.edit');
+Route::delete('/jadwal/{id}', [JadwalController::class, 'destroy'])->name('jadwal.destroy'); 
+Route::put('/jadwal/{id}', [JadwalController::class, 'update'])->name('jadwal.update');

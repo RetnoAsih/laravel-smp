@@ -111,70 +111,7 @@
 
       <!-- Kotak empat-->
 
-      <div class="row mt-4">
-        <div class="col-lg-7 mb-lg-0 mb-4">
-          <div class="card z-index-2 h-100">
-            <div class="card-header pb-0 pt-3 bg-transparent">
-              <h6 class="text-capitalize">Grafik</h6>
-              <p class="text-sm mb-0">
-                <i class="fa fa-arrow-up text-success"></i>
-                <span class="font-weight-bold">4% more</span> in 2021
-              </p>
-            </div>
-            <div class="card-body p-3">
-              <div class="chart">
-                <canvas id="chart-line" class="chart-canvas" height="300"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-5">
-          <div class="card card-carousel overflow-hidden h-100 p-0">
-            <div id="carouselExampleCaptions" class="carousel slide h-100" data-bs-ride="carousel">
-              <div class="carousel-inner border-radius-lg h-100">
-                <div class="carousel-item h-100 active" style="background-image: url('{{ asset('dashboard/assets/img/carousel-1.jpg') }}');
-      background-size: cover;">
-                  <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
-                    <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
-                      <i class="ni ni-camera-compact text-dark opacity-10"></i>
-                    </div>
-                    <h5 class="text-white mb-1">Get started with Argon</h5>
-                    <p>There’s nothing I really wanted to do in life that I wasn’t able to get good at.</p>
-                  </div>
-                </div>
-                <div class="carousel-item h-100" style="background-image: url('{{ asset('dashboard/assets/img/carousel-2.jpg') }}');
-      background-size: cover;">
-                  <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
-                    <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
-                      <i class="ni ni-bulb-61 text-dark opacity-10"></i>
-                    </div>
-                    <h5 class="text-white mb-1">Faster way to create web pages</h5>
-                    <p>That’s my skill. I’m not really specifically talented at anything except for the ability to learn.</p>
-                  </div>
-                </div>
-                <div class="carousel-item h-100" style="background-image: url('{{ asset('dashboard/assets/img/carousel-3.jpg') }}');
-      background-size: cover;">
-                  <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
-                    <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
-                      <i class="ni ni-trophy text-dark opacity-10"></i>
-                    </div>
-                    <h5 class="text-white mb-1">Share with us your design tips!</h5>
-                    <p>Don’t be afraid to be wrong because you can’t learn anything from a compliment.</p>
-                  </div>
-                </div>
-              </div>
-              <button class="carousel-control-prev w-5 me-3" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next w-5 me-3" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
 
       <div class="row mt-4">
@@ -280,7 +217,7 @@
         <div class="col-lg-5">
           <div class="card">
             <div class="card-header pb-0 p-3">
-              <h6 class="mb-0">Categories</h6>
+              <h6 class="mb-0">Status</h6>
             </div>
             <div class="card-body p-3">
               <ul class="list-group">
@@ -290,9 +227,10 @@
                       <i class="ni ni-mobile-button text-white opacity-10"></i>
                     </div>
                     <div class="d-flex flex-column">
-                      <h6 class="mb-1 text-dark text-sm">Devices</h6>
-                      <span class="text-xs">250 in stock, <span class="font-weight-bold">346+ sold</span></span>
-                    </div>
+    <h6 class="mb-1 text-dark text-sm">Koneksi Internet</h6>
+    <span id="internet-status" class="text-xs">Memeriksa...</span>
+</div>
+
                   </div>
                   <div class="d-flex">
                     <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto"><i class="ni ni-bold-right" aria-hidden="true"></i></button>
@@ -304,199 +242,72 @@
                       <i class="ni ni-tag text-white opacity-10"></i>
                     </div>
                     <div class="d-flex flex-column">
-                      <h6 class="mb-1 text-dark text-sm">Tickets</h6>
-                      <span class="text-xs">123 closed, <span class="font-weight-bold">15 open</span></span>
-                    </div>
+    <h6 class="mb-1 text-dark text-sm">WhatsApp Gateway</h6>
+    <span id="wa-gateway-status" class="text-xs">Memeriksa...</span>
+</div>
                   </div>
                   <div class="d-flex">
                     <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto"><i class="ni ni-bold-right" aria-hidden="true"></i></button>
                   </div>
                 </li>
-                <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
-                  <div class="d-flex align-items-center">
-                    <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                      <i class="ni ni-box-2 text-white opacity-10"></i>
-                    </div>
-                    <div class="d-flex flex-column">
-                      <h6 class="mb-1 text-dark text-sm">Error logs</h6>
-                      <span class="text-xs">1 is active, <span class="font-weight-bold">40 closed</span></span>
-                    </div>
-                  </div>
-                  <div class="d-flex">
-                    <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto"><i class="ni ni-bold-right" aria-hidden="true"></i></button>
-                  </div>
-                </li>
-                <li class="list-group-item border-0 d-flex justify-content-between ps-0 border-radius-lg">
-                  <div class="d-flex align-items-center">
-                    <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                      <i class="ni ni-satisfied text-white opacity-10"></i>
-                    </div>
-                    <div class="d-flex flex-column">
-                      <h6 class="mb-1 text-dark text-sm">Happy users</h6>
-                      <span class="text-xs font-weight-bold">+ 430</span>
-                    </div>
-                  </div>
-                  <div class="d-flex">
-                    <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto"><i class="ni ni-bold-right" aria-hidden="true"></i></button>
-                  </div>
-                </li>
+        
               </ul>
             </div>
           </div>
         </div>
       </div>
 
-
-      <footer class="footer pt-3  ">
-        <div class="container-fluid">
-          <div class="row align-items-center justify-content-lg-between">
-            <div class="col-lg-6 mb-lg-0 mb-4">
-              <div class="copyright text-center text-sm text-muted text-lg-start">
-                
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted" target="_blank">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted" target="_blank">License</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
 
 @include('footerbar')
 
-<!-- MODAL TAMBAH ADMIN 
-<div class="modal fade" id="tambahAdminModal" tabindex="-1" aria-labelledby="tambahAdminModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="tambahAdminModalLabel">Tambah Admin</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form action="{{ route('admin.tambahadmin') }}" method="POST">
-          @csrf
-          <div class="row">
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label class="form-label">Username</label>
-                <input type="text" name="username" class="form-control" required>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label class="form-label">Password</label>
-                <input type="text" name="password" class="form-control">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label class="form-label">Nama Lengkap</label>
-                <input type="text" name="nama_lengkap" class="form-control" required>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label class="form-label">Roles</label>
-                <select class="form-select" id="roles" name="roles">
-    <option selected disabled>Pilih salah satu</option>
-    <option value="admin">Admin</option>
-    <option value="guru">Guru</option>
-    
-  </select>
-              </div>
-            </div>
-          </div>
-          <div class="text-end">
-            <button type="submit" class="btn btn-primary">Simpan</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="editAdminModal" tabindex="-1" aria-labelledby="editAdminModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="editAdminModalLabel">Edit Admin</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form id="formEditAdmin" method="POST">
-          @csrf
-          @method('PUT')
-          <div class="row">
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label class="form-label">Username</label>
-                <input type="text" id="edit_username" name="username" class="form-control" required>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label class="form-label">Password (Kosongkan jika tidak diubah)</label>
-                <input type="text" id="edit_password" name="password" class="form-control">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label class="form-label">Nama Lengkap</label>
-                <input type="text" id="edit_nama_lengkap" name="nama_lengkap" class="form-control" required>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label class="form-label">Roles</label>
-                <select class="form-select" id="edit_roles" name="roles" required>
-                  <option value="admin">Admin</option>
-                  <option value="guru">Guru</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="text-end">
-            <button type="submit" class="btn btn-primary">Update</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
+                  -->
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    var editModal = document.getElementById('editAdminModal');
-    editModal.addEventListener('show.bs.modal', function (event) {
-        var button = event.relatedTarget;
+function cekInternet() {
+    const statusElement = document.getElementById('internet-status');
 
-        var id = button.getAttribute('data-id');
-        var username = button.getAttribute('data-username');
-        var nama = button.getAttribute('data-nama');
-        var roles = button.getAttribute('data-roles');
+    fetch('/cek-internet')
+        .then(res => res.json())
+        .then(data => {
+            if (data.connected) {
+                statusElement.innerText = "Terhubung";
+                statusElement.style.color = "green";
+            } else {
+                statusElement.innerText = "Tidak Terhubung";
+                statusElement.style.color = "red";
+            }
+        })
+        .catch(() => {
+            statusElement.innerText = "Tidak Terhubung";
+            statusElement.style.color = "red";
+        });
+}
 
-        // Isi form
-        document.getElementById('edit_username').value = username;
-        document.getElementById('edit_nama_lengkap').value = nama;
-        document.getElementById('edit_roles').value = roles;
-
-        // Set action URL untuk update
-        document.getElementById('formEditAdmin').action = '/admin/' + id;
-    });
-});
+cekInternet();
+setInterval(cekInternet, 5000);
 </script>
 
+<script>
+function cekWaGateway() {
+    const statusElement = document.getElementById('wa-gateway-status');
+
+    fetch('/cek-saungwa')
+        .then(response => response.json())
+        .then(data => {
+            if (data.connected) {
+                statusElement.innerText = "Terhubung";
+                statusElement.style.color = "green";
+            } else {
+                statusElement.innerText = "Tidak Terhubung";
+                statusElement.style.color = "red";
+            }
+        })
+        .catch(() => {
+            statusElement.innerText = "Tidak Terhubung";
+            statusElement.style.color = "red";
+        });
+}
+
+cekWaGateway();
+setInterval(cekWaGateway, 5000);
+</script>

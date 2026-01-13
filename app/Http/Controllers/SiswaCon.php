@@ -56,7 +56,7 @@ class SiswaCon extends BaseController
             'foto'  => 'uploads/foto/' . $filename,
         ]);
 
-        return redirect()->back()->with('success', 'Siswa berhasil ditambahkan!');
+        return redirect()->back()->with('success', 'User berhasil ditambahkan!');
     }
 
     public function edit($id)
@@ -69,7 +69,7 @@ public function destroy($id)
 {
     $siswa = Siswas::findOrFail($id);
     $siswa->delete();
-    return redirect()->back()->with('success', 'Data siswa berhasil dihapus');
+    return redirect()->back()->with('success', 'Data user berhasil dihapus');
 }
 public function oldupdate(Request $request, $id)
 {
@@ -94,7 +94,7 @@ public function oldupdate(Request $request, $id)
 
     $siswa->save();
 
-    return redirect()->back()->with('success', 'Siswa berhasil diperbarui!');
+    return redirect()->back()->with('success', 'User berhasil diperbarui!');
 }
 
 public function update(Request $request, $id)
@@ -143,7 +143,7 @@ public function update(Request $request, $id)
 
     $siswa->save();
 
-    return redirect()->back()->with('success', 'Siswa berhasil diperbarui!');
+    return redirect()->back()->with('success', 'User berhasil diperbarui!');
 }
 
 }

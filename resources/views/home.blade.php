@@ -195,7 +195,7 @@
                 <!--div-->
                 <h3>Panahan</h3>
                 <p>Ekstrakulikuler panahan adalah salah satu kegiatan di luar jam pelajaran yang bertujuan untuk mengem....</p>
-                <a href="department-details.html" class="btn-learn-more">
+                <a href="berita/ekstrakurikuler-panahan" class="btn-learn-more">
                   <span>Learn More</span>
                   <i class="fas fa-arrow-right"></i>
                 </a>
@@ -212,7 +212,7 @@
                  <img src="assets/img/silat.png" alt="Neurology Department" class="department-icon"> <!--ikon/lambang-->
                 <h3>Pagar Nusa</h3>
                 <p>Pagar Nusa atau sering disingkat PN, adalah organisasi pencak silat di bawah naungan Nahdlatul U....</p>
-                <a href="department-details.html" class="btn-learn-more">
+                <a href="berita/pagar-nusa" class="btn-learn-more">
                   <span>Learn More</span>
                   <i class="fas fa-arrow-right"></i>
                 </a>
@@ -229,7 +229,7 @@
                 <img src="assets/img/hadroh.png" alt="Neurology Department" class="department-icon"> <!--ikon/lambang-->
                 <h3>Hadroh</h3>
                 <p>Hadrah adalah sebuah seni pertunjukan tradisional dalam budaya Islam yang melibatkan musik, nyanyian...</p>
-                <a href="department-details.html" class="btn-learn-more">
+                <a href="berita/hadroh" class="btn-learn-more">
                   <span>Learn More</span>
                   <i class="fas fa-arrow-right"></i>
                 </a>

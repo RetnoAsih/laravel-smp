@@ -99,7 +99,7 @@ public function logout(Request $request)
     $request->session()->invalidate();
     $request->session()->regenerateToken();
 
-    return redirect('/_login')->with('success', 'Anda telah logout.');
+    return redirect('/')->with('success', 'Anda telah logout.');
 }
 
 }

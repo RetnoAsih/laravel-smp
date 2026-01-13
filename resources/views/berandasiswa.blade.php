@@ -7,9 +7,9 @@
       <div class="card mb-4">
         <div class="card-header pb-0">
           <div class="d-flex align-items-center">
-            <p class="mb-0">Data Siswa</p>
+            <p class="mb-0">Data Users</p>
             <button class="btn btn-primary btn-sm ms-auto" data-bs-toggle="modal" data-bs-target="#tambahAdminModal">
-              Tambah Siswa
+              Tambah Users
             </button>
           </div>
         </div>
@@ -20,8 +20,8 @@
                 <tr>
                   <th>No</th>
                   <th>RFID</th>
-                  <th>Nama Siswa</th>
-                  <th>Kelas</th>
+                  <th>Nama User</th>
+                  <th>Jenis User</th>
                   <th>No HP</th>
                   <th>Aksi</th>
                 </tr>
@@ -116,11 +116,12 @@
             <div class="col-md-6">
               <div class="mb-3">
                 <label class="form-label">Kelas</label>
-                <select class="form-select" id="kelas" name="kelas">
+                <select class="form-select" id="kelas" name="kelas" required>
                   <option selected disabled>Pilih salah satu</option>
                   <option value="7">7</option>
                   <option value="8">8</option>
                   <option value="9">9</option>
+                  <option value="guru">Guru</option>
                   
                 </select>
               </div>
@@ -148,7 +149,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="editAdminModalLabel">Edit Siswa</h5>
+        <h5 class="modal-title" id="editAdminModalLabel">Edit User</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -165,7 +166,7 @@
 
     <div class="col-md-6">
       <div class="mb-3">
-        <label class="form-label">Nama Siswa</label>
+        <label class="form-label">Nama User</label>
         <input type="text" id="edit_nama_siswa" name="nama_siswa" class="form-control" required>
       </div>
     </div>
@@ -191,6 +192,7 @@
           <option value="7">7</option>
           <option value="8">8</option>
           <option value="9">9</option>
+          <option value="guru">Guru</option>
         </select>
       </div>
     </div>

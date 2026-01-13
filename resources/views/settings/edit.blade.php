@@ -18,13 +18,25 @@
                     @method('PUT')
 
                     <div class="mb-3">
-                        <label for="batas_jam" class="form-label">Jam Batas</label>
+                        <label for="batas_jam" class="form-label">Jam Batas Pulang</label>
                         <input type="time" id="batas_jam" name="batas_jam" class="form-control" value="{{ $batas_jam }}" required>
                     </div>
+<div class="form-group mb-3">
+                  <label>APP Key Saung WA</label>
+                  <input type="text" name="saungwa_appkey" value="{{ env('SAUNGWA_APPKEY') }}" class="form-control">
+              </div>
+
+              <div class="form-group mb-3">
+                  <label>AUTH Key Saung WA</label>
+                  <input type="text" name="saungwa_authkey" value="{{ env('SAUNGWA_AUTHKEY') }}" class="form-control">
+              </div>
+
 
                     <button type="submit" class="btn btn-primary">Simpan</button>
-                </form>
-            </div>
+              </form>
+
+              
+          </div>
         </div>
       </div>
     </div>
